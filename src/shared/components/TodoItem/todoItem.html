@@ -1,0 +1,9 @@
+<li>
+  <input type="checkbox" :checked="todo.isCompleted" @input="toggleComplete" />
+  <div class="todo">
+    <input v-if="todo.isEditing" type="text" :value="todo.todo" />
+    <span v-else :class="{ 'completed-todo': todo.isCompleted }">
+      {{ todo.todo }}
+    </span>
+  </div>
+</li>
